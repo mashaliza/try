@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PZ Ice Cream</title>
+  <link rel="icon" href="logo.jpg" type="image/x-icon" />
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="PZ Ice Cream - Delicious flavors, fresh & fun! Order your favorite ice cream today!" />
+  <meta name="keywords" content="Ice Cream, PZ Ice Cream, Dessert, Sweet Treats, Fresh Ice Cream" />
+  <meta name="author" content="PZ Ice Cream" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      background-color: pink;
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Logo */
+    .logo-container {
+      background-color: pink;
+      text-align: center;
+      padding: 15px 0;
+      animation: fadeDown 1s ease forwards;
+    }
+    .logo-container img {
+      width: 150px;
+      border-radius: 200px;
+      transition: transform 0.3s ease;
+    }
+    .logo-container img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Navigation */
+    nav {
+      background-color: whitesmoke;
+      display: flex;
+      justify-content: center;
+      padding: 10px 20px;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      animation: fadeDown 1s ease forwards;
+      animation-delay: 0.2s;
+      animation-fill-mode: backwards;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+    }
+    .nav-links li {
+      margin: 0 12px;
+    }
+    .nav-links a {
+      color: black;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      display: block;
+    }
+    .nav-links a:hover,
+    .nav-links .active {
+      background-color: #d63384;
+      color: white;
+    }
+
+    /* Responsive Nav - always visible stacked on mobile */
+    @media (max-width: 700px) {
+      nav {
+        padding: 10px 10px;
+      }
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+      }
+      .nav-links li {
+        margin: 8px 0;
+      }
+    }
+
+    /* Animations */
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes zoomIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.8rem;
+      color: #d63384;
+      margin: 80px 20px 20px;
+      animation: fadeUp 1s ease forwards;
+      animation-delay: 0.4s;
+      opacity: 0;
+      animation-fill-mode: forwards;
+    }
+
+    .promo-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin: 40px 20px;
+      gap: 20px;
+      animation: fadeUp 1s ease forwards;
+      animation-delay: 0.6s;
+      opacity: 0;
+      animation-fill-mode: forwards;
+    }
+    .promo-row img {
+      max-width: 100%;
+      width: 400px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.4s ease;
+      border: none;
+    }
+    .promo-row img:hover {
+      transform: scale(1.05);
+    }
+    .promo-text {
+      background: white;
+      max-width: 600px;
+      border-radius: 40px;
+      border: inset #d63384 2px;
+      padding: 30px 35px;
+      box-shadow: 0 2px 10px rgba(214,51,132,0.25);
+      font-weight: 400;
+      font-size: 1.1rem;
+      color: #222;
+      text-indent: 50px;
+      line-height: 1.7;
+    }
+
+    .order-btn {
+      background-color: #ff4da6;
+      padding: 14px 30px;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      display: inline-block;
+      margin: 40px auto;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 12px rgba(255,77,166,0.5);
+      animation: zoomIn 1s ease forwards;
+      animation-delay: 0.8s;
+      opacity: 0;
+      animation-fill-mode: forwards;
+    }
+    .order-btn:hover {
+      background-color: #d63384;
+      box-shadow: 0 6px 18px rgba(214,51,132,0.6);
+    }
+    hr {
+      border: 2px solid #d63384;
+      margin: 40px 0;
+    }
+
+    /* Gallery */
+    .gallery-container {
+      max-width: 1200px;
+      margin: 0 auto 60px;
+      padding: 0 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      animation: fadeUp 1s ease forwards;
+      animation-delay: 0.9s;
+      opacity: 0;
+      animation-fill-mode: forwards;
+    }
+    .gallery {
+      flex: 1 1 22%;
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .gallery img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+      border-bottom: 2px solid #d63384;
+    }
+    .gallery:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(214,51,132,0.35);
+    }
+    .gallery:hover img {
+      transform: scale(1.1);
+    }
+    .desc {
+      padding: 15px;
+      font-weight: 600;
+      color: #d63384;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+    @media (max-width: 900px) {
+      .gallery {
+        flex: 1 1 45%;
+      }
+    }
+    @media (max-width: 500px) {
+      .gallery {
+        flex: 1 1 90%;
+      }
+    }
+
+    h2.section-title {
+      background-color: antiquewhite;
+      text-align: center;
+      padding: 15px 0;
+      margin-bottom: 30px;
+      font-weight: 700;
+      color: #d63384;
+      border-radius: 20px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 2rem;
+      letter-spacing: 1.2px;
+      animation: fadeUp 1s ease forwards;
+      animation-delay: 1s;
+      opacity: 0;
+      animation-fill-mode: forwards;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #f9f9f9;
+      padding: 20px 15px;
+      text-align: center;
+      color: #444;
+      font-weight: 500;
+      box-shadow: inset 0 1px 4px rgba(0,0,0,0.1);
+      animation: fadeUp 1s ease forwards;
+      animation-delay: 1.1s;
+      opacity: 0;
+      animation-fill-mode: forwards;
+    }
+    footer a {
+      color: #d63384;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Contact Form */
+    .contact-section {
+      background: white;
+      max-width: 600px;
+      margin: 0 auto 60px;
+      padding: 30px 25px;
+      border-radius: 20px;
+      box-shadow: 0 4px 14px rgba(214,51,132,0.25);
+      animation: fadeUp 1s ease forwards;
+      animation-delay: 1.2s;
+      opacity: 0;
+      animation-fill-mode: forwards;
+    }
+    .contact-section h3 {
+      color: #d63384;
+      margin-bottom: 20px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.8rem;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .contact-form label {
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: #444;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      padding: 12px 15px;
+      border-radius: 10px;
+      border: 2px solid #d63384;
+      font-size: 1rem;
+      resize: vertical;
+      font-family: 'Poppins', sans-serif;
+      transition: border-color 0.3s ease;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: #ff4da6;
+      box-shadow: 0 0 6px #ff4da6;
+    }
+    .contact-form button {
+      background-color: #d63384;
+      color: white;
+      padding: 14px;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+    }
+    .contact-form button:hover {
+      background-color: #ff4da6;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Logo -->
+  <div class="logo-container">
+    <img src="logo.jpg" alt="PZ Ice Cream Logo" />
+  </div>
+
+  <!-- Navigation -->
+  <nav>
+    <ul class="nav-links">
+      <li><a class="active" href="home.html">Home</a></li>
+      <li><a href="Menu.html">Menu</a></li>
+      <li><a href="New Arrival.html">New Arrival</a></li>
+      <li><a href="promotion.html">Promotion</a></li>
+      <li><a href="career.html">Career</a></li>
+      <li><a href="About us.html">About us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <h1>WELCOME TO PZ ICE-CREAM</h1>
+
+  <!-- Promo Row -->
+  <div class="promo-row">
+    <img src="ich1-removebg-preview.png" alt="Delicious Ice Cream" />
+    <div class="promo-text">
+      <p>
+        At PZ Ice Cream, we believe that ice cream is more than just a dessert — it's a little moment of happiness.
+        <br /><br />
+        Whether you're celebrating something special or just craving a cool treat on a sunny day, our ice cream is here to sweeten your day.
+        <br /><br />
+        We offer a variety of flavors, colors, and toppings that are made to delight every taste bud. From classic favorites to fun new creations, there’s always something exciting to try.
+        <br /><br />
+        More than just a store, PZ Ice Cream is a place where friends laugh, families share moments, and everyone is welcome.
+        <br /><br />
+        Come visit us, feel the joy, and scoop your favorite flavor today! 🍓🍫🍦
+      </p>
+    </div>
+  </div>
+
+  <!-- Order Button -->
+  <div style="text-align: center;">
+    <a href="Menu.html" class="order-btn">Order Now</a>
+  </div>
+
+  <hr />
+
+  <!-- Gallery -->
+  <div class="gallery-container">
+    <div class="gallery">
+      <img src="ich.png" alt="Sweet" />
+      <div class="desc">Sweet</div>
+    </div>
+    <div class="gallery">
+      <img src="red velvet.png" alt="Yummy" />
+      <div class="desc">Yummy</div>
+    </div>
+    <div class="gallery">
+      <img src="ich1-removebg-preview.png" alt="Fresh" />
+      <div class="desc">Fresh</div>
+    </div>
+    <div class="gallery">
+      <img src="ich2-removebg-preview.png" alt="Chill" />
+      <div class="desc">Chill</div>
+    </div>
+  </div>
+
+  <!-- Sweet Customers Section -->
+  <h2 class="section-title">Our Sweet Customers</h2>
+
+  <div class="gallery-container">
+    <div class="gallery">
+      <img src="cs1.jpg" alt="Happy Customer 1" />
+    </div>
+    <div class="gallery">
+      <img src="Ice-Cream-kids.jpg" alt="Happy Kids" />
+    </div>
+    <div class="gallery">
+      <img src="cs2.jpg" alt="Happy Customer 2" />
+    </div>
+    <div class="gallery">
+      <img src="cs3.jpg" alt="Happy Customer 3" />
+    </div>
+  </div>
+
+  <!-- Contact Form -->
+  <section class="contact-section">
+    <h3>Contact Us</h3>
+    <form class="contact-form" action="https://formspree.io/f/yourformid" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required placeholder="Your name" />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="_replyto" required placeholder="Your email" />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required placeholder="Write your message here"></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>📞 0778 89900 | 📍 No. 23, St 360, Phnom Penh</p>
+    <p>📩 Email: <a href="mailto:@youricecream.com">@pzicecream.com</a></p>
+  </footer>
+
+</body>
+</html>

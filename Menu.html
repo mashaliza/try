@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ice Cream Menu</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        font-size: 20px;
+        background-color: white;
+      }
+      ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: whitesmoke;
+
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color:black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color:#d63384;
+}
+
+.active {
+  background-color:#d63384; }
+      .logo {
+        border-radius: 200px;
+        width: 150px;
+        margin-left: 70px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+
+      .pic {
+        width: 70%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+
+      select {
+        padding: 10px;
+        font-size: 25px;
+        border-radius: 5px;
+        background-color: pink;
+        color: white;
+        border: none;
+      }
+
+      .style {
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      button {
+        padding: 6px 12px;
+        margin-left: 10px;
+        background-color: #ee6cd2;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 25px;
+      }
+
+      button:hover {
+        background-color: purple;
+      }
+
+      footer {
+        text-align: center;
+      }
+
+    </style>
+  </head>
+
+  <body>
+     <ul>
+            <li> <a class="active" href="home.html">Home</a></li>
+            <li> <a href="Menu.html">Menu</a> </li>
+            <li> <a href="New Arrival.html">New Arrival</a></li>
+            <li> <a href="promotion.html">Promotion</a></li>
+            <li> <a href="career.html">Career</a></li>
+            <li> <a href="About us.html">About us</a></li>
+        </ul>
+    <div>
+      <img src="logo.jpg" alt="logo" class="logo" />
+    </div>
+
+    <h1
+      style="
+        color: #ee6cd2;
+        text-align: center;
+        margin-bottom: 10px;
+        background-color: pink;
+      "
+    >
+      🍦 PZ Ice Menu Cream 🍦
+    </h1>
+
+    <div class="style">
+      <label for="ice-cream-choice">Choose a flavor:</label>
+      <select id="ice-cream-choice" name="ice-cream-choice">
+        <option value>Option</option>
+        <option value="Rainbow Light">Rainbow Light</option>
+        <option value="Blue Moon">Blue Moon</option>
+        <option value="Black Mountain">Black Mountain</option>
+        <option value="Red Velvet">Red Velvet</option>
+        <option value="Violet Star">Violet Star</option>
+        <option value="Green Forest">Green Forest</option>
+        <option value="Angel Bliss">Angel Bliss</option>
+        <option value="White Froze">White Froze</option>
+        <option value="Yellow Ocean">Yellow Ocean</option>
+      </select>
+      <button onclick="goToPage()">Submit</button>
+    </div>
+
+    <script>
+      function goToPage() {
+        const selected = document.getElementById("ice-cream-choice").value;
+        const flavorPages = {
+          "Rainbow Light": "rainbow light.html",
+          "Blue Moon": "blue moon.html",
+          "Black Mountain": "black mountain.html",
+          "Red Velvet": "red velvet.html",
+          "Violet Star": "violet star.html",
+          "Green Forest": "green forest.html",
+          "Angel Bliss": "angel bliss.html",
+          "White Froze": "white froze.html",
+          "Yellow Ocean": "yellow ocean.html",
+        };
+
+        if (flavorPages[selected]) {
+          window.location.href = flavorPages[selected];
+        } else {
+          alert("Please select a flavor from the list.");
+        }
+      }
+    </script>
+
+    <div>
+      <img src="ice cream.png" class="pic" alt="ice cream menu" />
+    </div>
+
+    <div style="text-align: center; margin: 40px">
+      <a
+        href="order now.html"
+        style="
+          background-color: #ff4da6;
+          padding: 12px 25px;
+          color: white;
+          border-radius: 8px;
+          text-decoration: none;
+          font-size: 1.1em;
+        "
+      >
+        Order Now
+      </a>
+    </div>
+  </body>
+  <footer style="font-size: 20px;">
+    <p><span>📞 0778 89900 |</span></p>
+    <p><span>📍 No. 23, St 360, Phnom Penh</span></p>
+    <p>
+      <span>💌Email: <a href="pzicecream.com">@pzicecream.com</a></span>
+    </p>
+  </footer>
+</html>

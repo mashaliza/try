@@ -1,0 +1,195 @@
+<title>Promotion</title>
+<link rel="icon" type="image/x-icon" href="logo.jpg">
+<style>
+  body {
+    background-color: Pink;
+    border: solid black;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover:not(.active) {
+    background-color: #d63384;
+  }
+
+  .active {
+    background-color: #d63384;
+  }
+
+  span {
+    float: left;
+    border: solid 1px black;
+  }
+
+  .promo-row {
+    
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin: 40px 20px;
+      gap: 0px;
+      background-color:palevioletred;
+
+      
+    
+  }
+  
+
+  .box {
+    border: dotted #d63384;
+    padding: 20px;
+    width: 250px;
+    margin: 10px;
+    border-radius: 20px;
+    font-size: 18px;
+
+
+  }
+
+  h3 {
+    text-align: center;
+    border: dotted #d63384 50px;
+    border-width: 10px;
+    font-size: xx-large;
+    background-color: white;
+    padding: 10px;
+  }
+
+  div.gallery {
+    border: none
+    
+  }
+
+  div.gallery:hover {
+    border: 1px solid #d63384;
+  }
+
+  div.gallery img {
+    width: 100%;
+    height: 200px;
+    border-radius: 50px;
+  }
+
+  div.desc {
+    padding: 15px;
+    text-align: center;
+    background: palevioletred ;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+  }
+
+  @media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }
+
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #444;
+    padding: 20px;
+  }
+</style>
+</head>
+
+<body>
+  <ul>
+    <li> <a class="active" href="home.html">Home</a></li>
+    <li> <a href="Menu.html">Menu</a> </li>
+    <li> <a href="New Arrival.html">New Arrival</a></li>
+    <li> <a href="promotion.html">Promotion & Discount</a></li>
+    <li> <a href="career.html">Career</a></li>
+    <li> <a href="About us.html">About us</a></li>
+  </ul>
+
+  <center><img src="logo.jpg" width="200px" style="border-radius: 200px; margin: 20px 20px 0px 0px;"></center>
+  <h1 style="color: #d63384;"> Promotion!!</h1>
+  <div class="promo-row">
+    <img  src="icp.png">
+    <span style="font-size: 80px;color: #d63384; border: solid palevioletred;"> + </span>
+    <img src="pro-removebg-preview.png">
+    <h3 style="text-align: center;">Buy 3 get 1 every FRIDAY!!</h3>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <img src="Ice-Cream-kids.jpg" width="600" height="400">
+      <div class="desc">20% discount for kids</div>
+    </div>
+  </div>
+
+  <div class="responsive">
+    <div class="gallery">
+      <img src="id.jpg" width="600" height="400">
+      <div class="desc">Bring your Student ID for 15% discount</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <img src="masha1.jpg" width="600" height="400">
+      <div class="desc">15% discount for Masha lovers</div>
+    </div>
+  </div>
+  <div class="responsive">
+    <div class="gallery">
+      <img src="disability.jpg" width="600" height="400">
+      <div class="desc">30% discount for disability people</div>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+
+<div style="padding:6px;">
+</div>
+</body>
+
+<footer>
+  <!-- Contact Info -->
+  <div style="text-align: center; margin-top: 20px; color: #444;">
+    <p>📞 0778 89900 | 📍 No. 23, St 360, Phnom Penh</p>
+    <p>📩 Email: <a href="mailto:@youricecream.com">@pzicecream.com</a></p>
+  </div>
+</footer>
